@@ -26,16 +26,15 @@ const companies = {
     const pool = req.app.get('pool');
     const qryStr = `
       insert into public.company (
-        id,
         company_name,
-        etc.
+        etc.....
       ) values (
         $1,
         $2,
         $3
       )
     `;
-    const params = new Array(req.body.id, req.body.company_name, req.body.whateverelse);
+    const params = new Array(req.body.company_name, req.body.whateverelse, req.body.other);
 
     pool.insert(res, qryStr, params);
   }

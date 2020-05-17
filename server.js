@@ -23,6 +23,8 @@ const companiesAPI = require('./server/companies-api');
 
 app.use('/clients', clientsAPI);
 app.use('/companies', companiesAPI);
+app.use('/jobs', jobsAPI);
+app.use('/users', usersAPI);
 
 // catch all other routes and return just a simple message
 app.all('*', (req, res) => res.send('Hi, this is not a real place'));
